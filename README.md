@@ -32,6 +32,9 @@ Installation steps:
 
 It's done! Now you can open Signal and enjoy your new theme.
 
+__Important Note:__ Every time you update Signal Desktop your customization will be
+overwritten. So you've to reinstall the theme on every update.
+
 ## Bugs
 
 Themes may be work in progress and also Signal updates can break them. You can
