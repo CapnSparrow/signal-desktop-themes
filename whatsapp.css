@@ -29,12 +29,17 @@
     border-radius: 7px;
     box-shadow: 0px 1px 1px 0px #949494;
 }
-.module-message__container--incoming {
+.module-message__container--incoming,
+.module-message--incoming .module-message__container--with-sticker,
+.module-message--incoming .module-message__container--emoji {
     background-color: #FFF !important;
     border-top-left-radius: 0px;
 }
-.module-message__container--outgoing {
+.module-message__container--outgoing,
+.module-message--outgoing .module-message__container--with-sticker,
+.module-message--outgoing .module-message__container--emoji {
     background-color: #dcf8c6 !important;
+    background-image: none;
 }
 .module-message__text {
     font-family: "Segoe UI";
@@ -46,6 +51,9 @@
 .module-message__text--incoming {
     color: #1b1b1b !important;
 }
+.module-message__text--outgoing {
+    color: #292929 !important;
+}
 .module-message-body__at-mention {
     color: #039be5;
     background-color: unset;
@@ -54,31 +62,18 @@
 .module-message__link-preview {
     margin-top: 0 !important;
 }
-.module-message__author {
-    color: #1b1b1b !important;
-}
 .module-message__metadata__date--incoming {
     color: #909090;
+}
+.module-message__metadata__date--outgoing {
+    color: #777777;
 }
 .module-message__metadata {
     justify-content: flex-end;
 }
-
-
-/* Apply different colors on each sender's name (Signal's original colors).
------------------------------------------------------------------------------ */
-.module-message__container--incoming-red           .module-message__author {color: #cc163d !important;}
-.module-message__container--incoming-deep_orange   .module-message__author {color: #c73800 !important;}
-.module-message__container--incoming-brown         .module-message__author {color: #746c53 !important;}
-.module-message__container--incoming-pink          .module-message__author {color: #a23474 !important;}
-.module-message__container--incoming-purple        .module-message__author {color: #862caf !important;}
-.module-message__container--incoming-indigo        .module-message__author {color: #5951c8 !important;}
-.module-message__container--incoming-blue          .module-message__author {color: #336ba3 !important;}
-.module-message__container--incoming-teal          .module-message__author {color: #067589 !important;}
-.module-message__container--incoming-green         .module-message__author {color: #3b7845 !important;}
-.module-message__container--incoming-light_green   .module-message__author {color: #1c8260 !important;}
-.module-message__container--incoming-blue_grey     .module-message__author {color: #895d66 !important;}
-.module-message__container--incoming-ultramarine   .module-message__author {color: #2c6bed !important;}
+.module-message__buttons__menu--container {
+    background-color: unset;
+}
 
 
 /* Quotes.
@@ -88,23 +83,15 @@
 }
 .module-quote--incoming {
     background-color: #f0f0f0 !important;
+    background-image: none;
+    border-left-color: #71717f;
 }
 .module-quote--outgoing {
     background-color: #cfe9ba !important;
+    background-image: none;
     border-radius: 4px !important;
+    border-left-color: #71717f;
 }
-.module-quote--incoming-red          {border-left: 4px solid #cc163d;}
-.module-quote--incoming-deep_orange  {border-left: 4px solid #c73800;}
-.module-quote--incoming-brown        {border-left: 4px solid #746c53;}
-.module-quote--incoming-pink         {border-left: 4px solid #a23474;}
-.module-quote--incoming-purple       {border-left: 4px solid #862caf;}
-.module-quote--incoming-indigo       {border-left: 4px solid #5951c8;}
-.module-quote--incoming-blue         {border-left: 4px solid #336ba3;}
-.module-quote--incoming-teal         {border-left: 4px solid #067589;}
-.module-quote--incoming-green        {border-left: 4px solid #3b7845;}
-.module-quote--incoming-light_green  {border-left: 4px solid #1c8260;}
-.module-quote--incoming-blue_grey    {border-left: 4px solid #895d66;}
-.module-quote--incoming-ultramarine  {border-left: 4px solid #2c6bed;}
 
 
 /* Sent/delivered/read statuses.
